@@ -1,0 +1,4 @@
+1, Install MinGW on a computer
+2. Copy the whole "mingw" folder to the thumb drive
+3. Use the run.bat on the same folder as MinGW folder
+4. Run run.bat
