@@ -1,0 +1,61 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: PIC Assembly
+file_extensions:
+  - asm
+scope: source.assembly
+contexts:
+  main:
+    - match: \b(?i)(v)?(addwf|andwf|clrf|clrw|comf|decf|decfsz|incf|incfsz|iorwf|movf|movwf|nop|rlf|rrf|subwf|swapf|xorwf|bcf|bsf|btfsc|btfss|addlw|andlw|call|clrwdt|goto|iorlw|movlw|retfie|retlw|return|sleep|sublw|xorlw)\b
+      scope: keyword.control.assembly
+    - match: '\b(?i)(RBP|EBP|BP|CS|DS|ES|FS|GS|SS|RAX|EAX|RBX|EBX|RCX|ECX|RDX|EDX|RCX|RIP|EIP|IP|RSP|ESP|SP|RSI|ESI|SI|RDI|EDI|DI|RFLAGS|EFLAGS|FLAGS|R(8|9|10|11|12|13|14|15)(d|w|b)?|(Y|X)MM([0-9]|10|11|12|13|14|15)|(A|B|C|D)(X|H|L)|CR([0-4]|DR([0-7]|TR6|TR7|EFER)))\b'
+      scope: variable.parameter.register.assembly
+    - match: '\b[0-9]+\b'
+      scope: constant.character.decimal.assembly
+    - match: '\b(0x)(?i)[A-F0-9]+\b'
+      scope: constant.character.hexadecimal.assembly
+    - match: '\b(?i)[A-F0-9]+h\b'
+      scope: constant.character.hexadecimal.assembly
+    - match: \b(?i)(0|1)+b\b
+      scope: constant.character.binary.assembly
+    - match: ("|').*?("|')
+      scope: string.assembly
+    - match: '^\['
+      push:
+        - meta_scope: support.function.directive.assembly
+        - match: '\]'
+          pop: true
+    - match: "(^struc) ([_a-zA-Z][_a-zA-Z0-9]*)"
+      scope: support.function.directive.assembly
+      captures:
+        2: entity.name.function.assembly
+    - match: ^endstruc
+      scope: support.function.directive.assembly
+    - match: "^%macro ([_a-zA-Z][_a-zA-Z0-9]*) ([0-9]+)"
+      scope: support.function.directive.assembly
+      captures:
+        1: entity.name.function.assembly
+        2: constant.character.assembly
+    - match: ^%endmacro
+      scope: support.function.directive.assembly
+    - match: '\s*(?i)(%define|%ifndef|%xdefine|%idefine|%undef|%assign|%defstr|%strcat|%strlen|%substr|%00|%0|%rotate|%rep|%endrep|%include|\$\$|\$|%unmacro|%if|%elif|%else|%endif|%(el)?ifdef|%(el)?ifmacro|%(el)?ifctx|%(el)?ifidn|%(el)?ifidni|%(el)?ifid|%(el)?ifnum|%(el)?ifstr|%(el)?iftoken|%(el)?ifempty|%(el)?ifenv|%pathsearch|%depend|%use|%push|%pop|%repl|%arg|%stacksize|%local|%error|%warning|%fatal|%line|%!|%comment|%endcomment|__NASM_VERSION_ID__|__NASM_VER__|__FILE__|__LINE__|__BITS__|__OUTPUT_FORMAT__|__DATE__|__TIME__|__DATE_NUM__|_TIME__NUM__|__UTC_DATE__|__UTC_TIME__|__UTC_DATE_NUM__|__UTC_TIME_NUM__|__POSIX_TIME__|__PASS__|ISTRUC|AT|IEND|BITS 16|BITS 32|BITS 64|USE16|USE32|__SECT__|ABSOLUTE|EXTERN|GLOBAL|COMMON|CPU|FLOAT)\b ?([_a-zA-Z][_a-zA-Z0-9]*)?'
+      captures:
+        1: support.function.directive.assembly
+        13: entity.name.function.assembly
+    - match: \b(?i)(d(b|w|d|q|t|o|y)|res(b|w|d|q|t|o)|equ|times|align|alignb|sectalign|section|ptr|byte|word|dword|qword|incbin|)\b
+      scope: support.function.directive.assembly
+    - match: (\s)*;.*$
+      scope: comment.assembly
+    - match: '(,|\[|\]|\+|\-|\*)'
+      scope: source.assembly
+    - match: ^\s*%%.+?:$
+      scope: entity.name.function.assembly
+    - match: ^\s*%\$.+?:$
+      scope: entity.name.function.assembly
+    - match: ^\.?.+?:$
+      scope: entity.name.function.assembly
+    - match: ^\.?.+?\b
+      scope: entity.name.function.assembly
+    - match: .+?
+      scope: entity.name.function.assembly

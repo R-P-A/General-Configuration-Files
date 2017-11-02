@@ -1,0 +1,4 @@
+{ 
+"shell_cmd": "make windows",
+"working_dir": "${file_path}",
+}
