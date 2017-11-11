@@ -1,9 +1,9 @@
 #!/bin/bash
 
 printf "\n\n\n**************************************************\n"
-printf "*             Installing Python-Pip              *\n"
+printf "*              Installing GTK-Theme              *\n"
 printf "**************************************************\n"
 
-sudo apt-get -y install python-pip
+sudo add-apt-repository -y ppa:system76/pop
 sudo apt update
-pip install --upgrade pip
+sudo apt -y install pop-theme
