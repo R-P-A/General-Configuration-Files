@@ -2,7 +2,7 @@
 
 printf "\n\n\n**************************************************\n"
 printf "*             Installing Python-Pip              *\n"
-printf "**************************************************\n"
+printf "**************************************************\n\n"
 
 sudo apt-get -y install python-pip
 sudo apt update

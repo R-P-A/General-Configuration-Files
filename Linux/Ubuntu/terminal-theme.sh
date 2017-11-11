@@ -2,8 +2,10 @@
 
 printf "\n\n\n**************************************************\n"
 printf "*           Installing Terminal Themes           *\n"
-printf "*   Please choose one and restart the terminal   *\n"
-printf "**************************************************\n"
+printf "**************************************************\n\n"
+
+printf "Please choose an option and press enter to create a profile with the theme\n"
+printf "My personal preference is 43 (Flat)\n\n"
 
 sudo apt-get update
 sudo apt-get -y install dconf-cli

@@ -22,9 +22,6 @@ chmod +x ./source-code-pro.sh
 chmod +x ./gnome-tweak-tool.sh
 ./gnome-tweak-tool.sh
 
-chmod +x ./google-chrome.sh
-./google-chrome.sh
-
 chmod +x ./git-kraken.sh
 ./git-kraken.sh
 
@@ -45,3 +42,9 @@ chmod +x ./telegram.sh
 
 chmod +x ./whatsapp.sh
 ./whatsapp.sh
+
+chmod +x ./slack.sh
+./slack.sh
+
+chmod +x ./google-chrome.sh
+./google-chrome.sh
