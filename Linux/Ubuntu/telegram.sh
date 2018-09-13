@@ -12,3 +12,5 @@ sudo mkdir /opt/telegram
 sudo mv Telegram/* /opt/telegram
 rm -rf Telegram linux
 /opt/telegram/Telegram
+sudo chown -R rpa:rpa /opt/telegram
+sudo chown -R rpa:rpa ~/.local
