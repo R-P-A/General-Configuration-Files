@@ -1,19 +1,5 @@
 chmod +x ./*.sh
-./initial-config.sh
-./clang.sh
-./git
-./git-kraken.sh
-./gnome-tweak-tool.sh
-./google-chrome.sh
-./gtk-theme.sh
-./lldb.sh
-./mysql.sh
-./python.sh
-./python3.sh
-./source-code-pro.sh
-./sublime-text.sh
-./telegram.sh
-./terminal-theme.sh
-./unzip.sh
-./vscode.sh
-./wine.sh
+
+for f in *.sh; do
+  bash "$f" -H 
+done
