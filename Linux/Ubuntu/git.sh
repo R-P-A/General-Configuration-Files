@@ -4,5 +4,6 @@ printf "\n\n\n**************************************************\n"
 printf "*                 Installing Git                 *\n"
 printf "**************************************************\n\n"
 
-sudo apt-get update
-sudo apt-get -y install git
+sudo apt update
+sudo apt -y install git
+git config --global core.editor "vim"

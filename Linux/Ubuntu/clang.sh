@@ -4,5 +4,5 @@ printf "\n\n\n**************************************************\n"
 printf "*                Installing Clang                *\n"
 printf "**************************************************\n\n"
 
-sudo apt-get update
-sudo apt-get -y install clang
+sudo apt update
+sudo apt -y install clang

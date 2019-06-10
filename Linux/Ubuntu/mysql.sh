@@ -4,8 +4,8 @@ printf "\n\n\n**************************************************\n"
 printf "*                Installing MySQL                *\n"
 printf "**************************************************\n\n"
 
-sudo apt-get update
-sudo apt-get -y install mysql-server
+sudo apt update
+sudo apt -y install mysql-server
 
 printf "\n\nFollow these instructions:\n"
 printf "Choose a master password when prompted to\n"

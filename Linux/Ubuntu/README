@@ -12,8 +12,8 @@ The installation of Sublime Text 3 assumes you downloaded my whole repository.
 Initial configurations:
 
 Please do these first:
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt update
+sudo apt upgrade
 Then restart the system.
 
 Then change terminal configurations for the theme to be successful

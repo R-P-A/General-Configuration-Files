@@ -1,8 +1,8 @@
 #!/bin/bash
 
 printf "\n\n\n**************************************************\n"
-printf "*                Installing Wine                 *\n"
+printf "*                Installing Pinta                *\n"
 printf "**************************************************\n\n"
 
 sudo apt update
-sudo apt -y install wine-stable
+sudo apt -y install pinta
