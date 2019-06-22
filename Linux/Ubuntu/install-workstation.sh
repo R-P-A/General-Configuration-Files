@@ -13,4 +13,3 @@ sudo ./gtk-theme-pop.sh
 sudo ./chrome-gnome-shell.sh
 sudo ./npm.sh
 sudo ./snap.sh
-sudo ./grive.sh
